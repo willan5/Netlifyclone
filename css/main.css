@@ -29,7 +29,7 @@ h6{
 .nav{
     display: flex;
     grid-template-columns: repeat(2,1fr);
-    background-color:skyblue;
+    /* background-color:skyblue; */
     margin:0 auto;
     margin:0px 60px;
     height:50px;
@@ -48,8 +48,7 @@ h6{
 .leftnavitems .logo{
     width:100px;
     height: 50px;
-    /* align-items:center;
-    justify-content: center; */      
+        
 }
 .itemsleft{
     display:grid;
@@ -252,7 +251,7 @@ li::before{
 }
 .rightlowercontent{
     display:grid;
-    grid-template-rows:4fr; 
+    grid-template-rows:1fr; 
     height:auto;
     padding-right: 50px; 
 }
@@ -268,5 +267,29 @@ li::before{
     background-image: url(../images/code2.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;   
+    background-position: center;
+    margin-left: 60px;   
+}
+@media(max-width:1120px){
+    .itemsright:nth-child(1),
+    .itemsright:nth-child(2),
+    .itemsright:nth-child(3){
+        display:none;
+    }
+    .nav{
+        display:grid;
+        justify-items:space-between;
+    }
+    .mainbody{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .leftbodyitem{
+        margin:0 auto;
+        margin-bottom: 150px;
+    }
+    .lowercontent{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 }
